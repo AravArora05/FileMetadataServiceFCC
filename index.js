@@ -45,6 +45,22 @@ app.post("/api/fileanalyse", upload.single("upfile"), function(req, res) {
     res.send({name: req.file.originalname, type: req.file.mimetype, size: req.file.size})
 });
 
+
+app.post("/api/filesanalyse", upload.array("upfiles", 5), function(req, res) {
+  if (!req.files) {
+    res.send("Make sure to upload correct files to here");
+  }
+  let count = 1;
+  object = {}
+  for (let i = 0; i < req.files.length; i++) {
+      object[i + 1] = {name: req.files[0].originalname, type: req.files[0].mimetype, size: req.files[0].size};
+  }
+  /**
+   * Note all objects in JS require a K-V pair
+   */
+  res.json(object);
+})
+
 const port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log('Your app is listening on port ' + port)

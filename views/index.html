@@ -7,7 +7,6 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
       <link href="/public/style.css" rel="stylesheet" type="text/css">
    </head>
-
    <body>
       <div class="container">
         <h1>API Project: File Metadata Microservice</h1>
@@ -21,6 +20,10 @@
           <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
             <input id="inputfield" type="file" name="upfile" required>
             <input id="button" type="submit" value="Upload">
+          </form>
+          <form enctype="multipart/form-data" method="POST" action = "/api/filesanalyse">
+            <input type="file" name="upfiles" required multiple>
+            <input id="button2" type="submit" value="Upload Multiple Files">
           </form>
         </div>
       </div>

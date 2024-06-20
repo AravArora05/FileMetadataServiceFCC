@@ -8,6 +8,14 @@ const fileStorage = multer.diskStorage({
   destination: function(req, file, cb) {
       cb(null, path.join(__dirname, 'uploads'));
   },
+  /**
+   * 
+   * Utilised this strategy in order to find a way to make sure each file had
+   * uniqueue names. 
+   * In the Github, you can see a SC of the Images being uploaded
+   * to the directory once I send the file!
+   * 
+   */
   filename: function(req, file, cb) {
       cb(null, file.fieldName + '-' + Date.now() + '-' + file.originalname);
   }

@@ -39,6 +39,9 @@ app.get('/', function (req, res) {
  * now will deal with uploading values
  */
 app.post("/api/fileanalyse", upload.single("upfile"), function(req, res) {
+  if (!req.file) {
+      res.send("Make sure that you submit a valid file to the database");
+  }
     res.send({name: req.file.originalname, type: req.file.mimetype, size: req.file.size})
 });
 

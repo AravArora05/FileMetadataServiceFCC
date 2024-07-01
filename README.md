@@ -30,8 +30,11 @@ Through this project, I learned how to:
 }
 ```
 
-###Technology Stack
- - Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine.
- - Express.js: A fast, unopinionated, minimalist web framework for Node.js.
- - Multer: Middleware for handling multipart/form-data, which is primarily used for uploading files.
- - JavaScript: The programming language used for building the server-side logic and handling file operations.
+### Technology Stack
+ - Node.js: 
+ - Express.js: web framework for Node.js.
+ - Multer: Middleware for handling multipart/form-data(primarily used for uploading files)
+ - JavaScript: language used for building the server-side logic and handling file operations.
+
+#### Cool Features
+As a matter of fact, I added some extra modifications and allowed users to be able to upload multiple files with Multer. It wasn't very difficult to implement, but it was cool to learn the differences between uploading one file and uplaoding multiple files into the spreadsheet.

@@ -28,7 +28,7 @@ Through this project, I learned how to:
   "type": "image/png",
   "size": 12345
 }
-
+```
 
 ###Technology Stack
  - Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine.
